@@ -170,7 +170,7 @@ public class Search {
 			int index = 0;
 			for (String node : connections) {
 				if(!alreadyVisited.contains(node) && !nodeQueue.contains(node)){
-					nodeQueue.add(index, node);
+					nodeQueue.add(0, node);
 					index++;
 					ArrayList<ArrayList<String>> currentPaths = new ArrayList<ArrayList<String>>();
 					currentPaths.addAll(paths);
@@ -179,7 +179,7 @@ public class Search {
 							ArrayList<String> newPath = new ArrayList<String>();
 							newPath.addAll(path);
 							newPath.add(node);
-							paths.add(newPath);
+							paths.add(0, newPath);
 						}
 					}
 				}
